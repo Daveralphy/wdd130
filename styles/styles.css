@@ -17,6 +17,14 @@ h1 {
     color: steelblue;
 }
 
+img {
+    width: 200px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+}
+
 aside {
     width: 20rem;
     margin: 1rem;
@@ -30,14 +38,6 @@ aside {
 aside img {
     width: 200px;
     height: auto;
-}
-
-img {
-    width: 200px;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
 }
 
 p {
