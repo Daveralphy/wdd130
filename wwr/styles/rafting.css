@@ -23,6 +23,14 @@ header, main, footer {
     margin: 0 auto;
 }
 
+header, footer {
+    width: 840px;
+    margin: 20px auto;
+    padding: 6px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
 h1, h2{
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -39,6 +47,11 @@ nav, p, section, article {
 
 .hero {
     position: relative;
+    max-height: 300px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 .hero img {
@@ -49,11 +62,13 @@ nav, p, section, article {
 
 .hero article {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     padding: 16px;
+    text-align: left;
 }
 
 .hero article img {
@@ -78,14 +93,25 @@ h2 {
 
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 16px ;
 }
+
+.image-gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+
 .image-gallery img {
     width: 100%;
-    height: 250px;
+    height: 150px;
     object-fit: cover;
+    display: block;
 }
+
 
 footer {
     display: flex;
@@ -96,6 +122,8 @@ footer {
 
 footer p {
     margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .socialmedia img {
@@ -111,16 +139,19 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    gap: 5px;
 }
 
 nav a {
-    display: block;
-    padding: 0.5rem;
+    display: flex;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     color: var(--accent1-color);
     font-weight: bold;
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
 }
 
 .history-section {
@@ -135,13 +166,29 @@ nav a {
     height: auto;
 }
 
+.history-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.history-content p {
+    flex: 1;
+}
+
+.history-content img {
+    max-width: 200px;
+    height: auto;
+}
+
 .adventures-section {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 10px;
 }
 
 .adventures-section figure {
+    flex: 1;
     margin: 0;
 }
 
@@ -151,13 +198,18 @@ nav a {
     object-fit: cover;
 }
 
-.social-icons {
+.history, .adventure {
+    border: 2px solid #ccc;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.socialmedia {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
-.social-icons img {
+.socialmedia img {
     width: 24px;
     height: auto;
     margin-left: 10px;
